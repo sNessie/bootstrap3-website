@@ -1,1 +1,23 @@
 // main: ../less/bootstrap.less
+
+.my_navbar{
+  min-height: 5rem;
+}
+
+.my_navbar-right {
+      .my_navbar-link{
+        color: @gray-base;
+        font-weight: @font-700;
+        border-top: 3px solid @body-bg;
+        padding: 0;
+        margin: 3rem 1.5rem;
+
+        &:hover{
+          border-top: 3px solid @brand-warning;
+          background-color: @body-bg;
+        }
+      }
+      .my_link-active{
+        border-top: 3px solid @brand-warning;
+      }
+}

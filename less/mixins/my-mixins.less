@@ -1,0 +1,15 @@
+// main: ../../less/bootstrap.less
+
+.transition-all(@time; @timing) {
+  -webkit-transition: all @time @timing;
+    -moz-transition: all @time @timing;
+    -o-transition: all @time @timing;
+    transition: all @time @timing;
+}
+
+.bg-image(@url){
+  background-image: url(@url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

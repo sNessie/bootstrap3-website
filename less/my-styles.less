@@ -62,11 +62,59 @@
   }
   &-title{
     .section-title;
-
   }
   &-description{
     .section-description;
 
   }
+}
 
+.my_services{
+  background: #70bfff;
+  color: @gray-lighter;
+  overflow: hidden;
+  &-description{
+    .section-center;
+  }
+  &-title{
+    .section-title;
+    @media (min-width: @screen-md-min) {
+       .section-center;
+       .bg-image("../img/services-bg.png");
+       background-size: contain;
+       min-width: 400px;
+       text-align: center;
+    }
+  }
+  &-list{
+    .flex;
+    .flex-column;
+
+
+
+  }
+  &-item{
+    background: @brand-white;
+    color: @brand-black;
+    margin-top: 3rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+    min-width: 400px;
+    height: 100px;
+    .flex;
+    .flex-row;
+    .flex-center;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+  }
+  &-p {
+    width: 75%;
+  }
+  &-img{
+    width: 15%;
+    border-left: 1px solid black;
+    height: 100%;
+    padding: 1rem;
+  }
 }

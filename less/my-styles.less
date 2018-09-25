@@ -251,3 +251,71 @@
     }
   }
 }
+
+.my_blog{
+  text-align: center;
+  background: @bg-blog;
+  color: @brand-white;
+  margin: 0 auto;
+  &-text{
+    height: 70vh;
+  }
+  &-title{
+    .section-title;
+  }
+  &-description{
+    .section-description;
+  }
+  &-img{
+    position: relative;
+  }
+  &-date{
+  position: absolute;
+  width: 50px;
+  top: 30px;
+  left: 30px;
+  color:  @brand-white;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+ 
+  }
+  &-article{
+  position: absolute;
+  top: 60%;
+  left: 0;
+  color:  @brand-white;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  padding: 0 40px;
+  text-align: left;
+  }
+  &-articledate{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    padding: 0 40px;
+    color:  @brand-white;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+  }
+  &-btn{
+    margin: 5rem 0;
+    background-color:  @btn-blog;
+    border: none;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    font-family: Raleway;
+    color:  @brand-white;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2.7rem;
+    padding: 2rem 4rem;
+    .transition-all(1s, ease);
+    &:hover{
+      background-color: @brand-white;
+      color: @btn-blog;
+    }
+  }
+}

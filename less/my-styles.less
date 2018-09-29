@@ -10,7 +10,7 @@
   background: @bg-navbar;
   @media (min-width: @screen-sm-min) {
     background: none;
-  }
+    }
 }
 .my_navbar {
   background: @bg-navbar;
@@ -18,13 +18,13 @@
   .transition-all(2s, ease);
   @media (min-width: @screen-sm-min) {
     background: none;
-  }
+    }
   &-fixed {
     background: @body-bg;
-  }
+    }
   &-header{
     min-height: 8rem;
-  }
+    }
 
 
   .my_navbar-right {
@@ -58,15 +58,12 @@
   &-center {
     .section-center;
   }
-
   &-title {
     .section-title;
   }
-
   &-description {
     .section-description;
   }
-
   &-btn {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
     border-radius: 0;
@@ -75,7 +72,6 @@
     line-height: 2.7rem;
     margin-top: 3rem;
   }
-
   &-scroll {
     margin-bottom: 5rem;
   }
@@ -227,7 +223,7 @@
     height: 5.5rem;
     padding: 1rem;
     @media (min-width: @screen-md-min) {
-      width: 70%;
+      width: 60%;
     }
   }
   &-btn{
@@ -236,10 +232,10 @@
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
     height: 5.5rem;
     width: 50%;
-    display: block;
+    display: inline-block;
     margin-top: 2rem;
     .transition-all(1s, ease);
-    margon-top:1rem;
+    margin-top:1rem;
     &:hover{
       background-color: @brand-white;
       color: @btn-subscribe;
@@ -247,6 +243,8 @@
     @media (min-width: @screen-md-min) {
       margin-left: 2rem;
       width: 20%;
+      margin-top: 0;
+
 
     }
   }
@@ -278,7 +276,6 @@
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 2.5rem;
- 
   }
   &-article{
   position: absolute;
@@ -317,5 +314,42 @@
       background-color: @brand-white;
       color: @btn-blog;
     }
+  }
+}
+
+.my_contact {
+  .bg-image('../../img/bg-contact.png');
+  color: @txt-gallery;
+  &-title{
+    .section-title;
+    margin-top: 10rem;
+  }
+  &-description{
+    .section-description;
+    margin-bottom: 4.6rem;
+  }
+  &-form{
+    background-color:  rgba(0, 196, 196, 0.5);
+    color: @brand-white;
+    &::placeholder {
+      color: @brand-white;
+    }
+  }
+  &-address{
+    font-size: 2 rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    
+    &:nth-of-type(3), &:nth-of-type(5){
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.my_footer{
+  padding: 4rem;
+  background: @bg-footer;
+  &-red{
+    color: @span-footer;
   }
 }

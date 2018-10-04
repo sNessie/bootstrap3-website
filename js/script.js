@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+    $('.navbar-collapse a').click(function(){
+        $(".navbar-collapse").collapse('hide');
+    });
+
+    $('html').click(function(){
+        $(".navbar-collapse").collapse('hide');
+    });
+
   $(window).scroll(function() {
   var scroll = $(window).scrollTop();
       if (scroll >= 50) {

@@ -1,11 +1,5 @@
 $(document).ready(function() {
     
-    $('.navbar-collapse a').click(function(){
-        $(".navbar-collapse").collapse('hide');
-    });
-    $('html').click(function(){
-        $(".navbar-collapse").collapse('hide');
-    });
 
   $(window).scroll(function() {
   var scroll = $(window).scrollTop();
@@ -25,17 +19,31 @@ $(document).ready(function() {
         $(this).removeClass('my_link-active');
     })
     $(this).addClass('my_link-active');
-    $("#id").animate({"scrollTop": $("#id").scrollTop() + 100});
     var target = this.hash,
         menu = target,
         headerHeight = $(".my_navbar").height(),
         scrollToPosition = $(target).offset().top - headerHeight;
     $target = $(target);
-    $('html').animate({ 'scrollTop': scrollToPosition }, 600, function(target){
+    $('html, body').stop().animate({ 'scrollTop': scrollToPosition }, 600, function(target){
         window.location.hash = target;
+        $(document).on("scroll", onScroll);
     });
 });
 
 
-
+function onScroll(event){
+var scrollPos = $(document).scrollTop();
+$('.my_navbar-right a').each(function () {
+    var currLink = $(this);
+    var refElement = $(currLink.attr("href"));
+    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('.my_navbar-right li a').removeClass("my_link-active");
+        currLink.addClass("my_link-active");
+    }
+    else{
+        currLink.removeClass("my_link-active");
+    }
+      
+})
+}
 });

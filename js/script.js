@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    var headerHeight = $(".my_navbar").height();
     $("body").click(function() {
          if ($(".navbar-collapse").is(":visible") && $(".navbar-toggle").is(":visible") ) {
             $('.navbar-collapse').collapse('toggle');
@@ -26,7 +27,7 @@ $(document).ready(function() {
         $(this).addClass('my_link-active');
         var target = this.hash,
         menu = target,
-        headerHeight = $(".my_navbar").height(),
+        // headerHeight = $(".my_navbar").height(),
         scrollToPosition = $(target).offset().top - headerHeight;
         $target = $(target);
         $('html, body').stop().animate({ 'scrollTop': scrollToPosition }, 600, function(target){
